@@ -1,0 +1,7 @@
+com\zzh\o2o\service\ShopCategoryServiceTest.class
+com\zzh\o2o\service\ShopServiceTest.class
+com\zzh\o2o\dao\ShopCategoryDaoTest.class
+com\zzh\o2o\BaseTest.class
+com\zzh\o2o\dao\AreaDaoTest.class
+com\zzh\o2o\dao\ShopDaoTest.class
+com\zzh\o2o\service\AreaServiceTest.class
