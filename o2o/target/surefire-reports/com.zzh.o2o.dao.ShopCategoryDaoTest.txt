@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.zzh.o2o.dao.ShopCategoryDaoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec <<< FAILURE!
-testQueryShopCategory(com.zzh.o2o.dao.ShopCategoryDaoTest)  Time elapsed: 0.018 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE!
+testQueryShopCategory(com.zzh.o2o.dao.ShopCategoryDaoTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<2> but was:<3>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)

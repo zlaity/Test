@@ -44,7 +44,7 @@
 				<a class="button button-link button-nav pull-left back"
 					href="/demos/form"> <span class="icon icon-left"></span> 返回
 				</a>
-				<h1 class="title">商店信息</h1>
+				<h1 class="title">商铺信息</h1>
 			</header>
 			<div class="content">
 				<div class="list-block">
@@ -144,7 +144,7 @@
 									<input type="text" id="j_kaptcha" placeholder="验证码">
 									<div class="item-input">
 										<img id="kaptcha_img" alt="点击更换" title="点击更换"
-											onclick="changeVerifyCode(this)" src="../Kaptcha">
+											onclick="changeVerifyCode(this)" src="../Kaptcha"><!-- src是找到web.xml中 对应的servlet的名字 -->
 									</div>
 								</div>
 							</div>
@@ -154,7 +154,7 @@
 				<div class="content-block">
 					<div class="row">
 						<div class="col-50">
-							<a href="#" class="button button-big button-fill button-danger">返回</a>
+							<a href="/o2o/shopadmin/shopmanagement" class="button button-big button-fill button-danger">返回</a>
 						</div>
 						<div class="col-50">
 							<a href="#" class="button button-big button-fill button-success"

@@ -1,7 +1,14 @@
+com\zzh\o2o\service\HeadLineServiceTest.class
 com\zzh\o2o\service\ShopCategoryServiceTest.class
 com\zzh\o2o\service\ShopServiceTest.class
-com\zzh\o2o\dao\ShopCategoryDaoTest.class
 com\zzh\o2o\BaseTest.class
 com\zzh\o2o\dao\AreaDaoTest.class
 com\zzh\o2o\dao\ShopDaoTest.class
 com\zzh\o2o\service\AreaServiceTest.class
+com\zzh\o2o\dao\HeadLineDaoTest.class
+com\zzh\o2o\dao\ShopCategoryDaoTest.class
+com\zzh\o2o\service\ProductServiceTest.class
+com\zzh\o2o\dao\ProductCategoryDaoTest.class
+com\zzh\o2o\service\ProductCategoryServiceImpl.class
+com\zzh\o2o\dao\ProductDaoTest.class
+com\zzh\o2o\dao\ProductImgDaoTest.class
