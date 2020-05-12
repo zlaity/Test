@@ -2,6 +2,7 @@ E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\dto\ImageHolder.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\dto\ProductCategoryExecution.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\util\PathUtil.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\web\shopadmin\ShopManagementController.java
+E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\util\EncryptPropertyPlaceholderConfigurer.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\web\shopadmin\ProductCategoryController.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\entity\WechatAuth.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\dao\ShopDao.java
@@ -49,6 +50,7 @@ E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\service\ProductService.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\dao\ProductDao.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\service\HeadLineService.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\enums\HeadLineStateEnum.java
+E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\util\DESUtils.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\service\AreaService.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\dao\HeadLineDao.java
 E:\eclipse-workspace\o2o\src\main\java\com\zzh\o2o\entity\ProductCategory.java

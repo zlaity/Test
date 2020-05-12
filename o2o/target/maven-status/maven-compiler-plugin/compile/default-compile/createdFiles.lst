@@ -1,5 +1,6 @@
 com\zzh\o2o\entity\LocalAuth.class
 com\zzh\o2o\util\baidu\ShortNetAddress.class
+com\zzh\o2o\util\EncryptPropertyPlaceholderConfigurer.class
 com\zzh\o2o\service\impl\AreaServiceImpl.class
 com\zzh\o2o\dao\AreaDao.class
 com\zzh\o2o\entity\PersonInfo.class
@@ -22,6 +23,7 @@ com\zzh\o2o\service\ShopCategoryService.class
 com\zzh\o2o\dto\ImageHolder.class
 com\zzh\o2o\enums\ProductStateEnum.class
 com\zzh\o2o\exceptions\ShopOperationException.class
+com\zzh\o2o\util\DESUtils.class
 com\zzh\o2o\util\QRCodeUtil.class
 com\zzh\o2o\entity\ProductImg.class
 com\zzh\o2o\exceptions\ProductCategoryOperationException.class

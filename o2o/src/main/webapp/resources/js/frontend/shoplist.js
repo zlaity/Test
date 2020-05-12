@@ -12,53 +12,57 @@ $(function() {
 	var areaId = '';
 	var shopCategoryId = '';
 	var shopName = '';
-	
-	// 加载店铺列表以及区域列表 
+
+	// 加载店铺列表以及区域列表
 	getSearchDivData();
 	// 预先加载pageSize *pageNum 条
 	addItems(pageSize, pageNum);
-	
+
 	function getSearchDivData() {
 		var url = searchDivUrl + '?' + 'parentId=' + parentId;
-		$.getJSON(url,
-				function(data) {
-					if (data.success) {
-						var shopCategoryList = data.shopCategoryList;
-						var html = '';
-						html += '<a href="#" class="button" data-category-id=""> 全部类别  </a>';
-						shopCategoryList
-								.map(function(item, index) {
-									html += '<a href="#" class="button" data-category-id='
-											+ item.shopCategoryId
-											+ '>'
-											+ item.shopCategoryName
-											+ '</a>';
+		$
+				.getJSON(
+						url,
+						function(data) {
+							if (data.success) {
+								var shopCategoryList = data.shopCategoryList;
+								var html = '';
+								html += '<a href="#" class="button" data-category-id=""> 全部类别  </a>';
+								shopCategoryList
+										.map(function(item, index) {
+											html += '<a href="#" class="button" data-category-id='
+													+ item.shopCategoryId
+													+ '>'
+													+ item.shopCategoryName
+													+ '</a>';
+										});
+								$('#shoplist-search-div').html(html);
+								var selectOptions = '<option value="">全部街道</option>';
+								var areaList = data.areaList;
+								areaList.map(function(item, index) {
+									selectOptions += '<option value="'
+											+ item.areaId + '">'
+											+ item.areaName + '</option>';
 								});
-						$('#shoplist-search-div').html(html);
-						var selectOptions = '<option value="">全部街道</option>';
-						var areaList = data.areaList;
-						areaList.map(function(item, index) {
-							selectOptions += '<option value="'
-									+ item.areaId + '">'
-									+ item.areaName + '</option>';
+								$('#area-search').html(selectOptions);
+							}
 						});
-						$('#area-search').html(selectOptions);
-					}
-				});
 	}
-	
-	
 
 	function addItems(pageSize, pageIndex) {
 		// 生成新条目的HTML
 		var url = listUrl + '?' + 'pageIndex=' + pageIndex + '&pageSize='
 				+ pageSize + '&parentId=' + parentId + '&areaId=' + areaId
 				+ '&shopCategoryId=' + shopCategoryId + '&shopName=' + shopName;
+		// 设定加载符，若还在后台取数据则不能再次访问后台，避免多次重复加载
 		loading = true;
+		// 访问后台获取相应查询条件下的商品列表
 		$.getJSON(url, function(data) {
 			if (data.success) {
+				// 获取当前查询条件下商品的总数
 				maxItems = data.count;
 				var html = '';
+				// 遍历商品列表，拼接出卡片集合
 				data.shopList.map(function(item, index) {
 					html += '' + '<div class="card" data-shop-id="'
 							+ item.shopId + '">' + '<div class="card-header">'
@@ -77,22 +81,27 @@ $(function() {
 							+ '更新</p>' + '<span>点击查看</span>' + '</div>'
 							+ '</div>';
 				});
+				// 将卡片集合添加到目标HTML组件里
 				$('.list-div').append(html);
+				// 获取目前为止已显示的卡片总数，包含之前已经加载的
 				var total = $('.list-div .card').length;
+				// 若总数达到跟按照此查询条件列出来的总数一致，则停止后台的加载
 				if (total >= maxItems) {
-					// 异常加载提示符
+					// 隐藏提示符
 					$('.infinite-scroll-preloader').hide();
-				}else{
+				} else {
 					$('.infinite-scroll-preloader').show();
 				}
+				// 否则页码+1，继续load出新的店铺
 				pageNum += 1;
+				// 加载结束，可以再次加载
 				loading = false;
 				// 刷新页面,显示新加载的店铺
 				$.refreshScroller();
 			}
 		});
 	}
-	
+
 	// 下滑屏幕 自动进行分页搜索
 	$(document).on('infinite', '.infinite-scroll-bottom', function() {
 		if (loading)
@@ -137,14 +146,14 @@ $(function() {
 				}
 
 			});
-
+	// 需要查询的商品名字发生变化后，重置页码，清空原先的商品列表，按照新的名字去查询
 	$('#search').on('change', function(e) {
 		shopName = e.target.value;
 		$('.list-div').empty();
 		pageNum = 1;
 		addItems(pageSize, pageNum);
 	});
-
+	// 区域信息发生变化后，重置页码，清空原先的商品列表，按照新的区域去查询
 	$('#area-search').on('change', function() {
 		areaId = $('#area-search').val();
 		$('.list-div').empty();
@@ -152,6 +161,7 @@ $(function() {
 		addItems(pageSize, pageNum);
 	});
 
+	// 点击后打开右侧栏
 	$('#me').click(function() {
 		$.openPanel('#panel-left-demo');
 	});

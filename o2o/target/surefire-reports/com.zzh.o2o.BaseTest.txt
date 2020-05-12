@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.zzh.o2o.BaseTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.051 sec <<< FAILURE!
-initializationError(com.zzh.o2o.BaseTest)  Time elapsed: 0.003 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.101 sec <<< FAILURE!
+initializationError(com.zzh.o2o.BaseTest)  Time elapsed: 0.004 sec  <<< ERROR!
 java.lang.Exception: No runnable methods
 	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:191)
 	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:128)

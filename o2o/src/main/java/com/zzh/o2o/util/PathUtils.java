@@ -36,7 +36,7 @@ public class PathUtils {
 		if (os.toLowerCase().startsWith("win")) {
 			basePath = "E:/o2o/photos";
 		} else {
-			basePath = "/home/o2o/image";
+			basePath = "/Users/baidu/work/photos";
 		}
 		// 根据操作系统的不同，使用当前操作系统的路径分隔符替换掉，我们写的basePath中的路径分隔符，当然了也可以在basePath赋值的时候直接使用seperator
 		basePath = basePath.replace("/", seperator);

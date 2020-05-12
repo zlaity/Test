@@ -53,6 +53,7 @@
 	<context:component-scan
 		base-package="com.zzh.o2o.web" />
 	<!-- 5.权限拦截器 -->
+	<!-- 校验是否以及该登录店家管理系统的拦截器 -->
 	<!-- <mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/shop/**" />
